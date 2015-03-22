@@ -11,7 +11,7 @@ function main() {
     //context.fillRect(10, 10, 300, 300);
 
     // draw rect: x, y, width, height
-    context.strokeRect(10, 10, 300, 300)
+    context.strokeRect(10, 10, 300, 300);
 
     // fill text: x, y
     //context.fillText("Hello World", 50, 50);
@@ -50,6 +50,15 @@ function main() {
     context.fill();
     */
 
+    var number = 5;
+
+    /*var font = "Dogs Rule";
+    context.fillText(dogs, 0, 50);*/
+    var dogs = ["Golden Retriever","Labrador","Pitt Bull"];
+   // var font = "Dogs Rule";
+    context.fillText(dogs[2], 0, 50);
+    console.log(dogs[0]);
+/*
     moveCircleTo(300, 400);
     moveCircleTo(500, 200);
     moveCircleTo(100, 200);
@@ -62,6 +71,18 @@ function main() {
     moveCircleTo(100, 400);
     moveCircleTo(300, 100);
     moveCircleTo(100, 400);
+  */  
+
+    var x = prompt("Where do you want the circle to move? (X axis)");
+    var y = prompt("Where do you want the circle to move? (Y axis)");
+    
+    var moveCircle = [x, y];
+
+    moveCircleTo(moveCircle[0], moveCircle[1]);
+    
+    
+    //console.log(answer);
+    //context.fillText(answer, 50, 100);
 }
 
 var position = {
@@ -88,6 +109,6 @@ function moveCircleTo(x, y)
     animateCx.setAttribute("dur", position.dur + "s");
     animateCy.setAttribute("values", position.y + ";" + position.oy);
     animateCy.setAttribute("dur", position.dur + "s");
-    //animateR.setAttribute("values", position.r);
-    //animateR.setAttribute("dur", position.dur + "s");
+    animateR.setAttribute("values", position.r);
+    animateR.setAttribute("dur", position.dur + "s");
 }
