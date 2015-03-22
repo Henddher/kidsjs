@@ -5,7 +5,14 @@
     </head>
     <body>
         <div>
-            <canvas id="canvas" width="800" height="600"></canvas>
+            <canvas id="canvas" width="800" height="600" style="position:fixed"></canvas>
+            <svg width="800" height="800" style="position:absolute">
+                <circle id="circle" cx="100" cy="100" r="50" fill="red">
+                    <animate id="animateCx" attributeName="cx" begin="circle.click"/>
+                    <animate id="animateCy" attributeName="cy" begin="circle.click"/>
+                    <animate id="animateR" attributeName="r" begin="circle.click"/>
+                </circle>
+            </svg>
         </div>
         <script type="text/javascript">
             main();

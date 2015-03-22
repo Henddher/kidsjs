@@ -14,10 +14,10 @@ function main() {
     context.strokeRect(10, 10, 300, 300)
 
     // fill text: x, y
-    context.fillText("Hello World", 50, 50);
+    //context.fillText("Hello World", 50, 50);
 
     // draw text: x, y
-    context.strokeText("Hi there!", 20, 30);
+    //context.strokeText("Hi there!", 20, 30);
 
     /*
     context.fillStyle = "red";
@@ -49,4 +49,45 @@ function main() {
     context.closePath();
     context.fill();
     */
+
+    moveCircleTo(300, 400);
+    moveCircleTo(500, 200);
+    moveCircleTo(100, 200);
+    moveCircleTo(100, 400);
+    moveCircleTo(300, 100);
+    moveCircleTo(100, 400);
+    moveCircleTo(300, 400);
+    moveCircleTo(500, 200);
+    moveCircleTo(100, 200);
+    moveCircleTo(100, 400);
+    moveCircleTo(300, 100);
+    moveCircleTo(100, 400);
+}
+
+var position = {
+    x : "100",
+    y : "100",
+    ox : "100",
+    oy : "100",
+    dur : 0,
+    r : "50",
+};
+
+function moveCircleTo(x, y)
+{
+    position.dur += 0.5;
+    position.x += ";" + x;
+    position.y += ";" + y;
+    position.r += ";" + 50.0*x/y;
+    console.log("r", position.r);
+    var circle = document.getElementById("circle");
+    var animateCx = document.getElementById("animateCx");
+    var animateCy = document.getElementById("animateCy");
+    var animateR = document.getElementById("animateR");
+    animateCx.setAttribute("values", position.x + ";" + position.ox);
+    animateCx.setAttribute("dur", position.dur + "s");
+    animateCy.setAttribute("values", position.y + ";" + position.oy);
+    animateCy.setAttribute("dur", position.dur + "s");
+    //animateR.setAttribute("values", position.r);
+    //animateR.setAttribute("dur", position.dur + "s");
 }
