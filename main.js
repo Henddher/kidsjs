@@ -11,7 +11,7 @@ function main() {
     //context.fillRect(10, 10, 300, 300);
 
     // draw rect: x, y, width, height
-    context.strokeRect(10, 10, 300, 300)
+   // context.strokeRect(10, 10, 300, 300)
 
     // fill text: x, y
     //context.fillText("Hello World", 50, 50);
@@ -32,7 +32,7 @@ function main() {
     // quad curve to: cx, cy, x, y
     context.quadraticCurveTo(40, 40, 50, 50); 
     // close:
-    context.closePath();
+    context.closePath(); 
     // stroke path:
     context.stroke();
     // fill path:
@@ -49,6 +49,42 @@ function main() {
     context.closePath();
     context.fill();
     */
+
+
+//What's your name
+
+var name = prompt("What's your name?");
+
+var array1 = ["I'm going to eat your flesh while you sleep", "Age 9", "Age 39", "Age 43", "You are awesome"]; 
+ 
+
+if ( name == "Leo" ) {
+    context.fillText(array1[0], 10, 300);
+}
+else if ( name == "Ailani") {
+    context.fillText(array1[1], 300, 300);
+}
+else if( name== "Claudia"){
+    context.fillText(array1[2], 300, 300)
+}
+else if( name == "Henddher"){
+context.fillText(array1[3], 300, 300)
+}
+else if(name == "Juan Pablo" || name == "juan pablo" || name == "Juan pablo" || name == "juan Pablo" ){
+context.fillText(array1[4], 300, 300);
+}
+else if(name == "Bryce"){
+context.fillText("We're going on a trip in our favorite rocket ship", 10, 300)
+}
+else{
+context.fillText("Hi " + name,300, 300);
+}
+
+
+
+
+
+
 
     moveCircleTo(300, 400);
     moveCircleTo(500, 200);
@@ -90,4 +126,8 @@ function moveCircleTo(x, y)
     animateCy.setAttribute("dur", position.dur + "s");
     //animateR.setAttribute("values", position.r);
     //animateR.setAttribute("dur", position.dur + "s");
+    
+    
+   
+    
 }
